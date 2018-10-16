@@ -18,7 +18,7 @@
 - Reference Edition: In development
 - Arelle: Available
 - Arelle Plugins: Available
-- Xule: Available upon request (not on GitHub)
+- Xule: Available
 - SEC Database upon request (not on GitHub)
 
 **Solar Taxonomy and Yeti:**
@@ -29,7 +29,7 @@ The official data specification for Orange Button is encompassed in the various 
 
 Before working on Orange Button source code either the Individual or Corporate Contributors agreement must be signed.  Information is available at [Orange Button](https://sunspec.org/ob-open-source-community/).
 
-For new repositories contact send an email to support@sunspec.org to vett the initial idea and create the repository.  Use the template-application repository as a starting point.  At a minimum the Apache 2.0 LICENSE file must be present. 
+For new repositories contact send an email to support@sunspec.org to vett the initial idea and create the repository.  Use the template-application repository as a starting point.  At a minimum the Apache 2.0 LICENSE file must be present.
 
 For current repositories contact the repository facilitator to determine colloboration procedure.  Some repositories use pull requests, as docuemnted in the community web page referenced above.  This may be covered in CONTRIBUTING.md.  Usually the name of the facilitator is obvious based on who is performing the commits but if not contact support@sunspec.org in order to find out the contact inforamtion.
 
@@ -43,7 +43,8 @@ XBRL: [link](https://www.xbrl.org/)
 
 Arelle: [link](http://arelle.org/)
 
+Xule: [link](https://github.com/DataQualityCommittee/dqc_us_rules/)
+
 Yeti Solar Taxonomy Review Tool: [link](https://yeti1.corefiling.com/)
 
 Solar Taxonomy PDF Based Guide: [link](https://sunspec.org/wp-content/uploads/2017/10/OrangeButtonTaxonomyGuideMay2018.pdf)
-
