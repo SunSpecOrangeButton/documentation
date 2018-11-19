@@ -4,7 +4,7 @@
 
 **Three types of code are available:**
 
-1. Orange Button Core Open Source is maintained by the Orange Button Open Source community.  It includes Apache 2.0 licensed libraries.  The libraries are written in Python and compatible with both Python 2.7.x and 3.x implementations.  The code libraries include an in memory data model but they intentionally do not include an on disk database (due to the large discrepancy on implementation intentions).  The core libraries should leverage the Python standard library to the extent possible to minimize required dependencies.  Python Programs may also be included outside of the core libaries and the programs may be compatible with any python implementation.  Other components such as the Solar Taxonomy (a collection of XSD files and sample data exist).  There is also an option to develop alternative implementations in other programming languages although no other implementation currently exists.
+1. Orange Button Core Open Source is maintained by the Orange Button Open Source community.  It includes Apache 2.0 licensed libraries.  The libraries are written in Python and compatible with both Python 2.7.x and 3.x implementations.  The main code library - pyoblib - includes an in memory data model, in memory meta-data about the solar taxonomy, and common tools (XML/JSON input output, conversion, vaidation, identifier generation, etc...).  Pyoblib intentionally does not include an on disk database (due to the large discrepancy on implementation intentions) although it may at a later date.  The core libraries should leverage the Python standard library to the extent possible to minimize required dependencies.  The Solar Taxonomy itself (an XSD based specification) is also published in the core shared area.  Python Programs may also be included outside of the core libaries and the programs may be compatible with any python implementation.  There is also an option to develop alternative implementations in other programming languages although no other implementation currently exists.
 2. Orange Button Reference edition is an end to end working REST server programmed in Python using the Django framework running on a MySQL database.  The reference edition is primarily built and operated by SunSpec Alliance.  The reference edition is neither fully tested or intended for production usage and can be thought of as an example program.  Unlike the community maintained portion of the source code the reference edition is not necessarily intended to be generic.
 3. XBRL Open Source code may be leveraged on an as needed basis.  XBRL code is maintained outside of the Orange Button GitHub environment and is a partner open source community.  More information on XBRL is available at [XBRL](https://www.xbrl.org/) and [Arelle](http://arelle.org/).
 
@@ -13,9 +13,9 @@
 - Documentation: Available
 - Solar Taxonomy: Available (XSD format is in GitHub and Yeti supplies a user interface)
 - ob-python-xbrl-generator: Available
-- Sample Orange Button Data: Available for Monthly Operating Reports only
-- Core Share Open Source Code: Proposed - not yet in development although some of the source code in ob-python-xbrl-generor should be possible to leverage.
-- Reference Edition: In development
+- Sample Code Orange Button Data: A handful of small sample programs have been built.  Sample Data is Available for Monthly Operating Reports only
+- Pyoblib (Core Shared Open Source Code): In development - available on GitHub
+- Reference Edition: In development - not yet available on GitHub
 - Arelle: Available
 - Arelle Plugins: Available
 - Xule: Available upon request (not on GitHub)
@@ -35,7 +35,7 @@ For current repositories contact the repository facilitator to determine collobo
 
 ## Useful Links
 
-Orange Button Initiative: [link](https://orangebuttondata.org/)
+Orange Button Resources: [link](https://sunspec.org/orange-button-resources/)
 
 SunSpec Alliance: [link](https://sunspec.org/)
 
