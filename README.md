@@ -1,49 +1,99 @@
 # Orange Button Design
 
+The following documentation is intended for application developers and technical users of the Sunspec Github Repos.  More information on data standard submittals is available at [orangebutton.io](http://orangebutton.io).
+
 ![OrangeButtonDesign](docs/OrangeButtonDesign.png)
 
-**Three types of code are available:**
+## Solar Taxonomy ##
 
-1. Orange Button Core Open Source is maintained by the Orange Button Open Source community.  It includes Apache 2.0 licensed libraries.  The projets are written in Python 3.x.  The main code library - pyoblib - includes an in memory data model, in memory meta-data about the solar taxonomy, and common tools (XML/JSON input output, conversion, vaidation, identifier generation, etc...).  Pyoblib intentionally does not include an on disk database (due to the large discrepancy on implementation intentions) although it may at a later date.  The core libraries should leverage the Python standard library to the extent possible to minimize required dependencies.  The Solar Taxonomy itself (an XSD based specification) is also published in the core shared area.  Python Programs may also be included outside of the core libaries and the programs may be compatible with any python implementation.
+The official data specification for Orange Button is encompassed in the various XSD files in the solar-taxonomy GITHub repository.  However this is not easy to read or digest.  Thus it is better to use one of these tools:
+
+**XBRL Taxonomy**
+
+The Orange Button Taxonomy is defined using the XBRL standard. XBRL is the international standard for the electronic representation
+of business reports.​ XBRL allows the definition, preparation and exchange of reporting information across organizational
+boundaries. It does so in a manner that can be validated at every point in the process which is made possible through a 
+number of interrelated technical ​specifications collectively referredto as the XBRL International Specification. These
+specifications set out how to create and test the "metadata" parts of XBRL: taxonomies, concepts, and dimensions (tables),
+as well as the "data" components: instances and facts.​ TheXBRL specification allows data conforming to the taxonomy to be
+defined in multiple formats including XML, JSON, and CSV. The Taxonomy itesle if defined using an XML based specification.
+
+**Open API Taxonomy**
+
+The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to RESTful APIs which allows both humans 
+and computers to discover and understand the capabilities of the service without access to source code, documentation, or 
+through network traffic inspection.
+
+Please note that this is not necessarily synchronized with the XBLR Taxonomy at this point in time.
+
+## Open Source Software ##
+
+**Two types of code are available:**
+
+1. Orange Button Core Open Source is maintained by the Orange Button Open Source community.  It includes Apache 2.0 licensed libraries.  The projets are written in Python 3.x.  The major projects are described in the following sections.
 2. XBRL Open Source code may be leveraged on an as needed basis.  XBRL code is maintained outside of the Orange Button GitHub environment and is a partner open source community.  More information on XBRL is available at [XBRL](https://www.xbrl.org/) and [Arelle](http://arelle.org/).
-3. A hypothetical design for an end to end program exists leveraging the open source libraries.  At this point in time no end to end edition exists although at least one of the sample programs could be leveraged.
+
+The main projects are listed below:
+
+**Open API Editor**
+
+The OB OpenAPI Editor is a web application that allows users to edit or create Orange Button compliant schemas in the OpenAPI format. Schemas are created using standardized solar industry terms that are defined in the Solar Taxonomy. The editor allows the definitions in the Solar Taxonomy context to be used in the more easy-to-use JSON format, allowing for easier use in web service applications.
+
+**Pyoblib**
+
+pyoblib - includes an in memory data model, in memory meta-data about the solar taxonomy, and common tools (XML/JSON input output, conversion, vaidation, identifier generation, etc...).  Pyoblib intentionally does not include an on disk database (due to the large discrepancy on implementation intentions) although it may at a later date.  The core libraries should leverage the Python standard library to the extent possible to minimize required dependencies.  The Solar Taxonomy itself (an XSD based specification) is also published in the core shared area.  Python Programs may also be included outside of the core libaries and the programs may be compatible with any python implementation.
+
+**Orange Button Taxonomy Viewer (OBTV)**
+
+The Orange Button Taxonomy Viewer allows for searching and displaying Orange Button Entrypoints, Concepts, Types, and Units by non-XBRL.  OBTV is a Vue.js application and relies on Pyoblib to generate the underlying meta data required at build time.
+
+**Product Code Registry**
+
+The Orange Button Product Code Registry is a web application containing registered product code strings allowing them to be standardized throughout the industry. The registry holds name and identifier information regarding entities and their products. It serves as a record keeper for the Orange Button compliant identifiers. The registry standardizes the naming schema for consistency and easy accessibility.
 
 **Currently only a portion of the source code is available.  The status of the various components follows:**
 
-- pyoblib: Available (v 1.0.0)
-- Solar Taxonomy: Available (v 1.3)
-- Documentation: Available
-- Sample Code / Orange Button Data: Available (more is needed)
-- Product Code Registry: Available
+- Solar XBRL Taxonomy: Available (v 2020-04-01)
+- Solar Open API Taxonomy: Available
+- pyoblib: Available (v 1.0.3)
+- OB Open API Editor: Available
+- Product Code Registry (front-end and server): Available
 - Archive: Available
     - ob-python-xbrl-generator: Archived
-- Open API (Conceptual edition is built, format is not ratified)
+    - open-api (legacy): Archived
+- Sample Code / Orange Button Data: Available (more is needed)
 - Arelle: Available
 - Arelle Plugins: Available
 - Xule: Available
 - SEC Database upon request (not on GitHub)
 - Other (not diagramed):
     - Clabot (Available)
-    
-##Solar Taxonomy, Arelle, and Yeti:
+    - Documentation
+  
+## XBRL Tools
 
-The official data specification for Orange Button is encompassed in the various XSD files in the solar-taxonomy GITHub repository.  However this is not easy to read or digest.  Thus it is better to use one of these tools:
+- Arelle (v.1.3): For XBRL experts the Arelle desktop software is a better option than OBTV - instructions are below.  Please note that for non-XBRL users OBTV is easier to use.
 
-- Arelle (v.1.3) - instructions below
-- Yeti Review tool (v1.2) available at [yeti](https://yeti1.corefiling.com/) 
-- A PDF based guide is also available at [guide](https://sunspec.org/wp-content/uploads/2017/10/OrangeButtonTaxonomyGuideMay2018.pdf).
+- A PDF based guide is also available at [guide](https://sunspec.org/wp-content/uploads/2017/10/OrangeButtonTaxonomyGuideMay2018.pdf).  Please note that this has not been updated since the May 2018 Orange Button Taxonomy release so many of its details are incorrect.  However at a conceptual level the guide is still quite helpful.
 
 **Arelle Instructions**
 
-The desktop edition of Arelle can be downloaded (see useful links section below).  Alternatively contact [Jessie Deot](mailto:jessie@sunspec.org) to receive access to a hosted edition of Arelle.
+The desktop edition of Arelle can be downloaded (see useful links section below).
 
 ## Getting started
 
-Before working on Orange Button source code either the Individual or Corporate Contributors agreement must be signed.  Information is available at [Orange Button](https://sunspec.org/ob-open-source-community/).
+Before working on Orange Button source code either the Individual or Corporate Contributors agreement must be signed.  Information is available at [Orange Button](https://orangebutton.io/community/).
 
 For new repositories contact send an email to support@sunspec.org to vett the initial idea and create the repository.  Use the template-application repository as a starting point.  At a minimum the Apache 2.0 LICENSE file must be present.
 
 For current repositories contact the repository facilitator to determine colloboration procedure.  Some repositories use pull requests, as docuemnted in the community web page referenced above.  This may be covered in CONTRIBUTING.md.  Usually the name of the facilitator is obvious based on who is performing the commits but if not contact support@sunspec.org in order to find out the contact inforamtion.
+
+## Archived programs
+
+Historical Orange Button components include:
+    - The Yeti Review tool is still available online however the Taxonomy loaded on Yeti is not updated.  Use OBTV or Arelle instead.
+    - ob-python-xbrl-generator was built before pyoblib and some of its concepts still work in pyoblib.  ob-python-xbrl-generateor no longer runs.
+    - open-api ia historical prototype.  It has been replaced by the Open API Editor and should not be used.
 
 ## Useful Links
 
@@ -53,10 +103,11 @@ SunSpec Alliance: [link](https://sunspec.org/)
 
 XBRL: [link](https://www.xbrl.org/)
 
+Orange Button Taxonomy Viewer (OBTV): [link](https://blubanyan.com/orange-button-taxonomy-viewer)
+
 Arelle: [link](http://arelle.org/)
 
 Xule: [link](https://github.com/DataQualityCommittee/dqc_us_rules/)
 
-Yeti Solar Taxonomy Review Tool: [link](https://yeti1.corefiling.com/)
-
-Solar Taxonomy PDF Based Guide: [link](https://sunspec.org/wp-content/uploads/2017/10/OrangeButtonTaxonomyGuideMay2018.pdf)
+Solar Taxonomy PDF Based Guide: [link](https://sunspec.org/wp-content/uploads/2017/10/OrangeButtonTaxonomyGuideMay2018.pdf).  Please
+note that this is not currently up to date but still can be used for conceptual purposes.
